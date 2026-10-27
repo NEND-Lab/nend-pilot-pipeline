@@ -134,9 +134,8 @@ python -m pytest
 
 ## Data privacy and governance
 
-Do not commit participant recordings, identifying information, consent records, credentials, or generated results to this public repository. Keep the participant identification key separate from coded research data. Share study data only under the applicable consent, ethics approval, and institutional governance arrangements.
+We did not commit participant recordings, identifying information, consent records, credentials, or generated results to this public repository. The participant identification key have been separated from coded research data. Share study data only under the applicable consent, ethics approval, and institutional governance arrangements.
 
-The supplied protocol identifies ethics approval and study registration as **in progress** in its administrative information. Do not present either as complete until its status has been confirmed and this README has been updated.
 
 ## License
 
