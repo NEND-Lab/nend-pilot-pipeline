@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Generated analysis artifacts
+derivatives/
+outputs/
+nend_outputs/
+figures/
+*.fif
+*.npy
+
+# Test artifacts
+tests/result.txt
+tests/bg_out.txt
+tests/bg_err.txt
+tests/poll.txt
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

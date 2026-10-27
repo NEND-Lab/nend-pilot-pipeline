@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nend-pilot-pipeline"
+version = "0.1.0"
+description = "Multimodal EEG (Muse) and fNIRS (Mendi) analysis pipeline for the NEND fasting study"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NEND Lab" }]
+keywords = ["EEG", "fNIRS", "neurovascular coupling", "fasting", "working memory", "BIDS"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "mne>=1.6",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+notebook = ["jupyterlab>=4.0", "ipykernel>=6.29"]
+
+[project.urls]
+Homepage = "https://github.com/NEND-Lab/nend-pilot-pipeline"
+Issues = "https://github.com/NEND-Lab/nend-pilot-pipeline/issues"
+
+[project.scripts]
+nend-analyse = "nend_pipeline.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
